@@ -7,7 +7,11 @@ const Header = () => {
         <div>
           <Link to="/">Gadget Heaven</Link>
         </div>
-        <nav>dhfd</nav>
+        <nav className="gap-7">
+          <Link to="/">Home</Link>
+          <Link to="/statistics">Statistics</Link>
+          <Link to="/dashboard">Dashboard</Link>
+        </nav>
         <div>
           <button>cart</button>
           <button>Wish List</button>
