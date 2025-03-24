@@ -5,7 +5,7 @@ const Root = () => {
   return (
     <>
       <Header></Header>
-      <div className="mx-auto max-w-5xl">
+      <div className="container mx-auto lg:max-w-6xl">
         <Outlet></Outlet>
       </div>
     </>
