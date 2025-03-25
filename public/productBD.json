@@ -1,0 +1,172 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "./productImage/Apple_iPhone_15_Pro_Max.jpg",
+    "category": "Smartphones",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "./productImage/Samsung_Galaxy_S24_Ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "A powerhouse with AI-enhanced camera and a stunning AMOLED display.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X",
+      "Snapdragon 8 Gen 3",
+      "Quad-camera system (200MP Main, 12MP Ultrawide, 10MP Periscope, 10MP Telephoto)",
+      "S Pen support",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Google Pixel 8 Pro",
+    "product_image": "./productImage/Google_Pixel_8_Pro.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "The smartest Pixel yet with AI-powered photography and Google Tensor chip.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Google Tensor G3",
+      "Triple-camera system (50MP Main, 48MP Ultrawide, 48MP Telephoto)",
+      "Titan M2 Security chip",
+      "Up to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P004",
+    "product_title": "OnePlus 12 Pro",
+    "product_image": "./productImage/OnePlus_12_Pro.jpg",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Fast and smooth performance with Hasselblad-powered cameras.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "Snapdragon 8 Gen 3",
+      "Triple-camera system (50MP Main, 48MP Ultrawide, 64MP Periscope)",
+      "100W SuperVOOC charging",
+      "Up to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P005",
+    "product_title": "MacBook Pro 16-inch (M3 Max)",
+    "product_image": "./productImage/MacBook_Pro_16-inch.jpg",
+    "category": "Laptops",
+    "price": 3499,
+    "description": "Apple’s most powerful MacBook Pro with an incredible battery life.",
+    "specification": [
+      "16.2-inch Liquid Retina XDR display",
+      "Apple M3 Max chip",
+      "32GB RAM, 1TB SSD",
+      "100W fast charging",
+      "macOS Sonoma"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Dell XPS 15",
+    "product_image": "./productImage/Dell_XPS_15.jpg",
+    "category": "Laptops",
+    "price": 2199,
+    "description": "Premium build with a stunning 3.5K OLED display and Intel Core i9.",
+    "specification": [
+      "15.6-inch 3.5K OLED display",
+      "Intel Core i9 13th Gen",
+      "32GB RAM, 1TB SSD",
+      "NVIDIA RTX 4070",
+      "Windows 11 Pro"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Asus ROG Zephyrus G16",
+    "product_image": "./productImage/Asus_ROG_Zephyrus.jpg",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "A powerful gaming laptop with AI-driven cooling and fast refresh rate.",
+    "specification": [
+      "16-inch QHD+ 240Hz display",
+      "AMD Ryzen 9 7945HX",
+      "32GB RAM, 1TB SSD",
+      "NVIDIA RTX 4080",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P008",
+    "product_title": "HP Spectre x360 14",
+    "product_image": "./productImage/HPSpectrex360.jpg",
+    "category": "Laptops",
+    "price": 1599,
+    "description": "A sleek convertible laptop with a 2.8K OLED touch display.",
+    "specification": [
+      "14-inch 2.8K OLED touch display",
+      "Intel Core i7 13th Gen",
+      "16GB RAM, 1TB SSD",
+      "Windows 11",
+      "360-degree hinge"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Apple Watch Ultra 2",
+    "product_image": "./productImage/AppleWatchUltra2.jpg",
+    "category": "Smartwatches",
+    "price": 799,
+    "description": "The ultimate smartwatch for adventure, fitness, and health tracking.",
+    "specification": [
+      "49mm Always-On Retina display",
+      "S9 chip",
+      "Up to 36 hours battery life",
+      "Water-resistant 100m",
+      "GPS + Cellular"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Samsung Galaxy Watch 6",
+    "product_image": "./productImage/SamsungGalaxyWatch6.jpg",
+    "category": "Smartwatches",
+    "price": 399,
+    "description": "A premium smartwatch with advanced health tracking features.",
+    "specification": [
+      "1.5-inch Super AMOLED display",
+      "Exynos W930 chip",
+      "BioActive Sensor",
+      "Up to 40 hours battery life",
+      "Wear OS 4"
+    ],
+    "availability": true,
+    "rating": 4.7
+  }
+]

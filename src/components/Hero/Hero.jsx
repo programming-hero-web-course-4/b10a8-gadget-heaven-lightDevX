@@ -2,7 +2,7 @@ import banner from "../../assets/images/banner.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative -z-10 overflow-hidden">
       {/* Hero Content */}
       <div className="bg-primary mx-8 rounded-b-2xl px-5 pt-8 pb-20 md:px-6 md:pb-28 lg:px-0 lg:pb-64">
         <div className="container mx-auto lg:max-w-6xl">
