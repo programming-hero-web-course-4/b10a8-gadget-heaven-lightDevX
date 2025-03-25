@@ -24,7 +24,7 @@ const Hero = () => {
 
       {/* Banner Image (Responsive & Positioned Properly) */}
       <div className="relative mx-12 -mt-12 flex justify-center md:-mt-16 lg:-mt-56">
-        <div className="h-1/2 w-[90%] max-w-3xl overflow-hidden rounded-2xl border-2 border-white bg-white/70 p-3 shadow-2xl md:h-[256px] md:max-w-4xl md:p-5 lg:h-[512px] lg:max-w-5xl lg:p-6">
+        <div className="h-1/2 w-[90%] max-w-3xl overflow-hidden rounded-2xl border-2 border-white bg-white/70 p-3 md:h-[256px] md:max-w-4xl md:p-5 lg:h-[512px] lg:max-w-5xl lg:p-6">
           <img
             src={banner}
             alt="Tech accessories collage"
