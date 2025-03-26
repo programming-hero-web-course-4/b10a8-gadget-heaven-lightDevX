@@ -51,11 +51,11 @@ const ProductDetails = () => {
                 <span>4.5</span>
               </div>
               <div className="flex w-full items-center justify-between lg:w-1/3">
-                <button className="bg-primary relative flex items-center justify-center rounded-4xl p-1.5 py-1 font-semibold text-white lg:px-5 lg:py-2.5 lg:font-bold">
+                <button className="bg-primary flex items-center justify-center rounded-4xl p-1.5 py-1 font-semibold text-white lg:px-5 lg:py-2.5 lg:font-bold">
                   Add To Card
                   <ShoppingCart className="ml-1 text-white" />
                 </button>
-                <button className="relative flex items-center justify-center rounded-full border border-neutral-900/60 p-1 lg:p-2">
+                <button className="flex items-center justify-center rounded-full border border-neutral-900/60 p-1 lg:p-2">
                   <Heart className="text-neutral-900/65" />
                 </button>
               </div>
