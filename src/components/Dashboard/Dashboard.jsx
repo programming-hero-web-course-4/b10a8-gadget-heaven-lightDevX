@@ -1,4 +1,5 @@
 import CartList from "../CartList/CartList";
+import WishList from "../WishList/WishList";
 
 const Dashboard = () => {
   return (
@@ -25,6 +26,7 @@ const Dashboard = () => {
       </div>
 
       <CartList></CartList>
+      <WishList></WishList>
     </>
   );
 };
