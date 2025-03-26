@@ -168,5 +168,39 @@
     ],
     "availability": true,
     "rating": 4.7
+  },
+  {
+    "product_id": "P013",
+    "product_title": "Bose QuietComfort Ultra Headphones",
+    "product_image": "./productImage/BoseQuietComfortUltraHeadphones.jpg",
+    "category": "Accessories",
+    "price": 429,
+    "description": "Premium noise-canceling headphones with immersive audio.",
+    "specification": [
+      "CustomTune technology",
+      "Quiet & Aware Modes",
+      "24-hour battery life",
+      "Multipoint Bluetooth",
+      "USB-C charging"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P014",
+    "product_title": "PlayStation 5",
+    "product_image": "./productImage/PlayStation5.jpg",
+    "category": "Gaming Consoles",
+    "price": 499,
+    "description": "The next-gen gaming console from Sony with ultra-fast SSD.",
+    "specification": [
+      "8-core AMD Zen 2 CPU",
+      "Custom RDNA 2 GPU",
+      "Ultra-fast SSD storage",
+      "DualSense controller",
+      "4K gaming at 120Hz"
+    ],
+    "availability": true,
+    "rating": 4.8
   }
 ]

@@ -1,60 +1,56 @@
 const Footer = () => {
   return (
-    <footer>
-      <div className="container mx-auto px-4 py-8">
-        <div className="mt-24 flex flex-col items-center justify-center gap-4 py-4">
-          <h1 className="text-[32px] font-bold text-neutral-900">
+    <footer className="bg-gray-100">
+      <div className="container mx-auto px-6 py-8">
+        {/* Logo & Description */}
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 text-center">
+          <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
             Gadget Heaven
           </h1>
-          <p className="text-base font-medium text-neutral-900/60">
+          <p className="text-sm text-neutral-700 sm:text-base">
             Leading the way in cutting-edge technology and innovation.
           </p>
         </div>
-        <div className="mx-auto my-8 h-[1px] w-[60%] bg-amber-100 md:w-[70%] lg:w-7xl"></div>
-        <div className="grid grid-cols-1 justify-items-center gap-4 py-4 md:grid-cols-2 lg:grid-cols-3">
+
+        {/* Divider Line */}
+        <div className="mx-auto my-6 h-[1px] w-[80%] bg-amber-200 sm:w-[70%] lg:w-7xl"></div>
+
+        {/* Footer Links */}
+        <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
+          {/* Services */}
           <div>
-            <h2 className="text-xl font-bold text-neutral-900">Services</h2>
-            <ul className="mt-2.5 flex flex-col gap-2">
-              <li className="text-base font-normal text-neutral-900/35">
-                Product Support
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Order Tracking
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Shipping & Delivery
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Returns
-              </li>
+            <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
+              Services
+            </h2>
+            <ul className="mt-2 space-y-2 text-neutral-700">
+              <li className="text-sm sm:text-base">Product Support</li>
+              <li className="text-sm sm:text-base">Order Tracking</li>
+              <li className="text-sm sm:text-base">Shipping & Delivery</li>
+              <li className="text-sm sm:text-base">Returns</li>
             </ul>
           </div>
+
+          {/* Company */}
           <div>
-            <h2 className="text-xl font-bold text-neutral-900">Company</h2>
-            <ul className="mt-2.5 flex flex-col gap-2">
-              <li className="text-base font-normal text-neutral-900/35">
-                About Us
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Careers
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Contact
-              </li>
+            <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
+              Company
+            </h2>
+            <ul className="mt-2 space-y-2 text-neutral-700">
+              <li className="text-sm sm:text-base">About Us</li>
+              <li className="text-sm sm:text-base">Careers</li>
+              <li className="text-sm sm:text-base">Contact</li>
             </ul>
           </div>
+
+          {/* Legal */}
           <div>
-            <h2 className="text-xl font-bold text-neutral-900">Legal</h2>
-            <ul className="mt-2.5 flex flex-col gap-2">
-              <li className="text-base font-normal text-neutral-900/35">
-                Terms of Service
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Privacy Policy
-              </li>
-              <li className="text-base font-normal text-neutral-900/35">
-                Cookie Policy
-              </li>
+            <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
+              Legal
+            </h2>
+            <ul className="mt-2 space-y-2 text-neutral-700">
+              <li className="text-sm sm:text-base">Terms of Service</li>
+              <li className="text-sm sm:text-base">Privacy Policy</li>
+              <li className="text-sm sm:text-base">Cookie Policy</li>
             </ul>
           </div>
         </div>
