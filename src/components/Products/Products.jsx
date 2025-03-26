@@ -26,22 +26,22 @@ const Products = () => {
       {/* Main Layout */}
       <div className="flex flex-col gap-6 md:flex-row">
         {/* Left Side: Filters */}
-        <div className="w-full flex-shrink-0 space-y-4 md:w-1/4">
+        <div className="w-full flex-shrink-0 space-y-4 rounded-2xl bg-white p-6 md:w-1/4">
           <h3 className="text-lg font-semibold">Filter by Category</h3>
           <div className="flex flex-col space-y-3">
-            <button className="rounded-lg border border-gray-300 px-4 py-2 text-sm sm:text-base">
+            <button className="rounded-4xl bg-gray-200 px-4 py-2 text-sm text-neutral-900/60 sm:text-xl">
               All Products
             </button>
-            <button className="rounded-lg border border-gray-300 px-4 py-2 text-sm sm:text-base">
+            <button className="rounded-4xl bg-gray-200 px-4 py-2 text-sm text-neutral-900/60 sm:text-xl">
               Laptops
             </button>
-            <button className="rounded-lg border border-gray-300 px-4 py-2 text-sm sm:text-base">
+            <button className="rounded-4xl bg-gray-200 px-4 py-2 text-sm text-neutral-900/60 sm:text-xl">
               Phones
             </button>
-            <button className="rounded-lg border border-gray-300 px-4 py-2 text-sm sm:text-base">
+            <button className="rounded-4xl bg-gray-200 px-4 py-2 text-sm text-neutral-900/60 sm:text-xl">
               Smart Watches
             </button>
-            <button className="rounded-lg border border-gray-300 px-4 py-2 text-sm sm:text-base">
+            <button className="rounded-4xl bg-gray-200 px-4 py-2 text-sm text-neutral-900/60 sm:text-xl">
               Accessories
             </button>
           </div>
