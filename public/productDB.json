@@ -2,7 +2,7 @@
   {
     "product_id": "P001",
     "product_title": "Apple iPhone 15 Pro Max",
-    "product_image": "./productImage/Apple_iPhone_15_Pro_Max.jpg",
+    "product_image": "/productImage/Apple_iPhone_15_Pro_Max.jpg",
     "category": "Smartphones",
     "price": 1299,
     "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -19,7 +19,7 @@
   {
     "product_id": "P002",
     "product_title": "Samsung Galaxy S24 Ultra",
-    "product_image": "./productImage/Samsung_Galaxy_S24_Ultra.jpg",
+    "product_image": "/productImage/Samsung_Galaxy_S24_Ultra.jpg",
     "category": "Smartphones",
     "price": 1199,
     "description": "A powerhouse with AI-enhanced camera and a stunning AMOLED display.",
@@ -36,7 +36,7 @@
   {
     "product_id": "P003",
     "product_title": "Google Pixel 8 Pro",
-    "product_image": "./productImage/Google_Pixel_8_Pro.jpg",
+    "product_image": "/productImage/Google_Pixel_8_Pro.jpg",
     "category": "Smartphones",
     "price": 999,
     "description": "The smartest Pixel yet with AI-powered photography and Google Tensor chip.",
@@ -53,7 +53,7 @@
   {
     "product_id": "P004",
     "product_title": "OnePlus 12 Pro",
-    "product_image": "./productImage/OnePlus_12_Pro.jpg",
+    "product_image": "/productImage/OnePlus_12_Pro.jpg",
     "category": "Smartphones",
     "price": 899,
     "description": "Fast and smooth performance with Hasselblad-powered cameras.",
@@ -70,7 +70,7 @@
   {
     "product_id": "P005",
     "product_title": "MacBook Pro 16-inch (M3 Max)",
-    "product_image": "./productImage/MacBook_Pro_16-inch.jpg",
+    "product_image": "/productImage/MacBook_Pro_16-inch.jpg",
     "category": "Laptops",
     "price": 3499,
     "description": "Apple’s most powerful MacBook Pro with an incredible battery life.",
@@ -82,12 +82,12 @@
       "macOS Sonoma"
     ],
     "availability": true,
-    "rating": 4.9
+    "rating": 5
   },
   {
     "product_id": "P006",
     "product_title": "Dell XPS 15",
-    "product_image": "./productImage/Dell_XPS_15.jpg",
+    "product_image": "/productImage/Dell_XPS_15.jpg",
     "category": "Laptops",
     "price": 2199,
     "description": "Premium build with a stunning 3.5K OLED display and Intel Core i9.",
@@ -104,7 +104,7 @@
   {
     "product_id": "P007",
     "product_title": "Asus ROG Zephyrus G16",
-    "product_image": "./productImage/Asus_ROG_Zephyrus.jpg",
+    "product_image": "/productImage/Asus_ROG_Zephyrus.jpg",
     "category": "Laptops",
     "price": 1799,
     "description": "A powerful gaming laptop with AI-driven cooling and fast refresh rate.",
@@ -121,7 +121,7 @@
   {
     "product_id": "P008",
     "product_title": "HP Spectre x360 14",
-    "product_image": "./productImage/HPSpectrex360.jpg",
+    "product_image": "/productImage/HPSpectrex360.jpg",
     "category": "Laptops",
     "price": 1599,
     "description": "A sleek convertible laptop with a 2.8K OLED touch display.",
@@ -138,7 +138,7 @@
   {
     "product_id": "P009",
     "product_title": "Apple Watch Ultra 2",
-    "product_image": "./productImage/AppleWatchUltra2.jpg",
+    "product_image": "/productImage/AppleWatchUltra2.jpg",
     "category": "Smartwatches",
     "price": 799,
     "description": "The ultimate smartwatch for adventure, fitness, and health tracking.",
@@ -155,7 +155,7 @@
   {
     "product_id": "P010",
     "product_title": "Samsung Galaxy Watch 6",
-    "product_image": "./productImage/SamsungGalaxyWatch6.jpg",
+    "product_image": "/productImage/SamsungGalaxyWatch6.jpg",
     "category": "Smartwatches",
     "price": 399,
     "description": "A premium smartwatch with advanced health tracking features.",
@@ -172,7 +172,7 @@
   {
     "product_id": "P013",
     "product_title": "Bose QuietComfort Ultra Headphones",
-    "product_image": "./productImage/BoseQuietComfortUltraHeadphones.jpg",
+    "product_image": "/productImage/BoseQuietComfortUltraHeadphones.jpg",
     "category": "Accessories",
     "price": 429,
     "description": "Premium noise-canceling headphones with immersive audio.",
@@ -189,7 +189,7 @@
   {
     "product_id": "P014",
     "product_title": "PlayStation 5",
-    "product_image": "./productImage/PlayStation5.jpg",
+    "product_image": "/productImage/PlayStation5.jpg",
     "category": "Gaming Consoles",
     "price": 499,
     "description": "The next-gen gaming console from Sony with ultra-fast SSD.",

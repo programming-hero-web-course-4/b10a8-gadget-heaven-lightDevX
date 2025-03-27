@@ -7,7 +7,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("./productBD.json");
+        const res = await fetch("./productDB.json");
         const data = await res.json();
         setProducts(data);
       } catch (error) {

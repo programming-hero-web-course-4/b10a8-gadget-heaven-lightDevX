@@ -1,7 +1,16 @@
-import CartList from "../CartList/CartList";
-import WishList from "../WishList/WishList";
+import { Outlet, useNavigate } from "react-router";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleCartList = () => {
+    navigate("cart-list");
+  };
+
+  const handleWishList = () => {
+    navigate("wish-list");
+  };
+
   return (
     <>
       <div className="bg-primary px-4 py-6 md:py-12">
@@ -15,18 +24,24 @@ const Dashboard = () => {
             it all!
           </p>
           <div className="flex flex-col items-center justify-center gap-3 py-4 md:flex-row md:gap-6">
-            <button className="text-primary w-full rounded-4xl bg-white px-6 py-3 font-semibold md:w-auto md:px-8 md:py-4">
+            <button
+              onClick={handleCartList}
+              className="text-primary w-full rounded-4xl bg-white px-6 py-3 font-semibold md:w-auto md:px-8 md:py-4"
+              aria-label="Go to Cart List"
+            >
               Cart
             </button>
-            <button className="w-full rounded-4xl border border-white px-6 py-3 font-semibold text-white md:w-auto md:px-8 md:py-4">
+            <button
+              onClick={handleWishList}
+              className="w-full rounded-4xl border border-white px-6 py-3 font-semibold text-white md:w-auto md:px-8 md:py-4"
+              aria-label="Go to Wish List"
+            >
               Wish List
             </button>
           </div>
         </div>
       </div>
-
-      <CartList></CartList>
-      <WishList></WishList>
+      <Outlet></Outlet>
     </>
   );
 };

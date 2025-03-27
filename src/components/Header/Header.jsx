@@ -1,9 +1,16 @@
 import { Heart, Menu, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
+  const headerStyles = isHomePage
+    ? "bg-primary text-white mx-8 mt-8 rounded-t-2xl px-5 py-8 md:px-3 lg:px-2.5"
+    : "bg-white text-neutral-900  mt-8  px-5 py-8 md:px-3 lg:px-2.5";
+  const linkStyles = isHomePage ? "text-white" : "text-neutral-900";
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -13,8 +20,8 @@ const Header = () => {
 
   return (
     <header className="relative">
-      <div className="bg-primary mx-8 mt-8 rounded-t-2xl px-5 py-8 md:px-3 lg:px-2.5">
-        <div className="mx-auto flex items-center justify-between text-white lg:max-w-6xl">
+      <div className={`${headerStyles}`}>
+        <div className="mx-auto flex items-center justify-between lg:max-w-6xl">
           {/* Logo */}
           <div>
             <Link to="/" className="text-xl font-bold">
@@ -28,7 +35,9 @@ const Header = () => {
               <NavLink
                 key={link.path}
                 to={link.path}
-                className="text-base font-bold hover:text-gray-300"
+                className={({ isActive }) =>
+                  `text-base font-bold ${isActive ? "text-amber-300/70" : linkStyles} hover:text-lime-400 hover:underline hover:underline-offset-4`
+                }
               >
                 {link.name}
               </NavLink>
@@ -58,7 +67,7 @@ const Header = () => {
 
           {/* Mobile Menu Overlay */}
           <div
-            className={`bg-primary fixed top-0 left-0 flex h-screen w-full transform flex-col items-center justify-center gap-6 p-6 text-center text-white transition-all duration-1000 ease-in-out md:hidden ${
+            className={`bg-primary fixed top-0 left-0 z-50 flex h-screen w-full transform flex-col items-center justify-center gap-6 p-6 text-center text-white transition-all duration-1000 ease-in-out md:hidden ${
               isOpen
                 ? "translate-y-0 opacity-100"
                 : "-translate-y-full opacity-0"
