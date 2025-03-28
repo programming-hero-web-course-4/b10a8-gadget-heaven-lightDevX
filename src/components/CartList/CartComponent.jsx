@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import {
@@ -79,7 +80,7 @@ const CartComponent = ({ onTotalChange, sortOrder }) => {
               onClick={() => handleRemove(product.product_id)}
               className="absolute top-4 right-4 text-red-400 md:relative md:top-0 md:right-0 md:ml-4"
             >
-              <lucideX className="h-8 w-8 rounded-full border border-red-400 p-1 transition hover:bg-red-400 hover:text-white" />
+              <X className="h-8 w-8 rounded-full border border-red-400 p-1 transition hover:bg-red-400 hover:text-white" />
             </button>
           </div>
         </div>
