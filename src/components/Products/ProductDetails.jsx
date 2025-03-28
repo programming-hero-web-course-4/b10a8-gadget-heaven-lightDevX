@@ -14,7 +14,7 @@ const ProductDetails = () => {
 
   const [showModal, setShowModal] = useState({
     show: false,
-    actionType: "cart", // default to cart
+    actionType: "cart",
   });
 
   const product = productData.find(
@@ -40,11 +40,13 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     addToStoreProductList(product.product_id);
+
     setShowModal({ show: true, actionType: "cart" });
   };
 
   const handleWishList = () => {
     addToStoreWishListItems(product.product_id);
+
     setShowModal({ show: true, actionType: "wishlist" });
   };
 
@@ -66,9 +68,7 @@ const ProductDetails = () => {
           </p>
         </div>
 
-        {/* Product Card */}
         <div className="absolute top-2/3 z-20 mx-5 flex h-full gap-4 rounded-2xl bg-white p-3 lg:top-2/4 lg:left-72 lg:h-auto lg:flex-row lg:gap-8 lg:p-8">
-          {/* Image Section */}
           <div className="h-full w-full rounded-2xl bg-gray-300 lg:h-[480px] lg:w-[500px]">
             <img
               src={product_image}
@@ -77,7 +77,6 @@ const ProductDetails = () => {
             />
           </div>
 
-          {/* Details Section */}
           <div className="w-full space-y-1.5 lg:space-y-4">
             <h1 className="text-xl font-normal lg:text-3xl">{product_title}</h1>
             <p className="text-base font-normal lg:text-xl">Price: $ {price}</p>
@@ -90,7 +89,6 @@ const ProductDetails = () => {
               {description}
             </p>
 
-            {/* Specifications */}
             <div className="space-y-1.5 lg:space-y-4">
               <h1 className="text-base font-normal lg:text-xl">
                 Specification:
@@ -107,7 +105,6 @@ const ProductDetails = () => {
               </ul>
             </div>
 
-            {/* Ratings */}
             <div className="hidden md:block">
               <p className="text-base font-bold text-neutral-900 lg:text-[18px]">
                 Ratings
@@ -128,7 +125,6 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex w-full flex-col items-center justify-between gap-1.5 py-0.5 md:flex-row lg:w-1/3">
               <button
                 onClick={handleAddToCart}
@@ -148,12 +144,12 @@ const ProductDetails = () => {
         </div>
         <div className="mt-[384px] lg:mt-[448px]"></div>
       </div>
-      {/* Modal */}
+
       {showModal.show && (
         <Modal
           actionType={showModal.actionType}
           onClose={handleCloseModal}
-          price={price} // Or calculate total differently
+          price={price}
         />
       )}
     </div>

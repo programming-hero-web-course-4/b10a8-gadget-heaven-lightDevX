@@ -58,7 +58,7 @@ const addToStoreWishListItems = (id) => {
 // For CART operations
 const removeFromStoreProductList = (id) => {
     const storeList = getProductItems();
-    const updatedList = storeList.filter(item => item !== id); // Remove only the specified ID
+    const updatedList = storeList.filter(item => item !== id);
     localStorage.setItem('product-cart-list', JSON.stringify(updatedList)); // Update localStorage
 };
 
@@ -69,6 +69,10 @@ const removeFromStoreWishList = (id) => {
     localStorage.setItem('wish-list', JSON.stringify(updatedList));
 };
 
+const clearCartStorage = () => {
+    localStorage.removeItem("product-cart-list");
+};
 
-export { addToStoreProductList, addToStoreWishListItems, getProductItems, getWishListItems, removeFromStoreProductList, removeFromStoreWishList };
+
+export { addToStoreProductList, addToStoreWishListItems, clearCartStorage, getProductItems, getWishListItems, removeFromStoreProductList, removeFromStoreWishList };
 

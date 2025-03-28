@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 
 const Product = ({ product }) => {
   const { product_id, product_image, product_title, price } = product;
-  // console.log(product);
+
   const navigate = useNavigate();
 
   const handleViewDetails = () => {

@@ -22,6 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/statistics",
+        loader: () => fetch("/productDB.json"),
         element: <Statistics></Statistics>,
       },
       {

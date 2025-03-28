@@ -1,10 +1,57 @@
 import { Heart, Menu, ShoppingCart, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const location = useLocation();
+
+  const [cartLength, setCartLength] = useState(0);
+  const [wishList, setWishList] = useState(0);
+
+  // Handle cart updates
+  useEffect(() => {
+    const updateCartLength = () => {
+      const cartItems = JSON.parse(
+        localStorage.getItem("product-cart-list") || "[]",
+      );
+      setCartLength(cartItems.length);
+    };
+
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function (key, value) {
+      originalSetItem.apply(this, arguments);
+      if (key === "product-cart-list" || key === "wish-list") {
+        window.dispatchEvent(
+          new StorageEvent("storage", { key, newValue: value }),
+        );
+      }
+    };
+
+    updateCartLength();
+    window.addEventListener("storage", updateCartLength);
+
+    return () => {
+      window.removeEventListener("storage", updateCartLength);
+      localStorage.setItem = originalSetItem;
+    };
+  }, []);
+
+  // Handle wishlist updates
+  useEffect(() => {
+    const updateWishList = () => {
+      const wishItems = JSON.parse(localStorage.getItem("wish-list") || "[]");
+      setWishList(wishItems.length);
+    };
+
+    updateWishList();
+    window.addEventListener("storage", updateWishList);
+
+    return () => {
+      window.removeEventListener("storage", updateWishList);
+    };
+  }, []);
 
   const isHomePage = location.pathname === "/";
   const headerStyles = isHomePage
@@ -22,14 +69,12 @@ const Header = () => {
     <header className="relative">
       <div className={`${headerStyles}`}>
         <div className="mx-auto flex items-center justify-between lg:max-w-6xl">
-          {/* Logo */}
           <div>
             <Link to="/" className="text-xl font-bold">
               Gadget Heaven
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden gap-12 md:flex">
             {navLinks.map((link) => (
               <NavLink
@@ -44,28 +89,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Icons */}
           <div className="hidden gap-4 md:flex">
             <button className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white">
               <ShoppingCart className="text-neutral-900/65" />
               <span className="absolute -top-2 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-lime-300 text-xs font-bold text-neutral-900/65">
-                1
+                {cartLength}
               </span>
             </button>
             <button className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white">
               <Heart className="text-neutral-900/65" />
               <span className="absolute -top-2 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-lime-300 text-xs font-bold text-neutral-900/65">
-                1
+                {wishList}
               </span>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Mobile Menu Overlay */}
           <div
             className={`bg-primary fixed top-0 left-0 z-50 flex h-screen w-full transform flex-col items-center justify-center gap-6 p-6 text-center text-white transition-all duration-1000 ease-in-out md:hidden ${
               isOpen
@@ -73,7 +115,6 @@ const Header = () => {
                 : "-translate-y-full opacity-0"
             }`}
           >
-            {/* Close Button */}
             <button
               className="absolute top-6 right-8"
               onClick={() => setIsOpen(false)}
@@ -81,7 +122,6 @@ const Header = () => {
               <X size={28} />
             </button>
 
-            {/* Mobile Links */}
             <nav className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <NavLink
@@ -95,18 +135,17 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Mobile Icons */}
             <div className="mt-4 flex gap-4">
               <button className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <ShoppingCart className="text-neutral-900/65" />
                 <span className="absolute -top-2 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-lime-300 text-xs font-bold text-neutral-900/65">
-                  1
+                  {cartLength}
                 </span>
               </button>
               <button className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <Heart className="text-neutral-900/65" />
                 <span className="absolute -top-2 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-lime-300 text-xs font-bold text-neutral-900/65">
-                  1
+                  {wishList}
                 </span>
               </button>
             </div>

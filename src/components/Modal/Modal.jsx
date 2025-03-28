@@ -1,7 +1,6 @@
 import { BadgeCheck, Heart, ShoppingCart } from "lucide-react";
 
 const Modal = ({ actionType, onClose, price }) => {
-  // Define content based on action type
   const modalContent = {
     cart: {
       title: "Added to Cart!",

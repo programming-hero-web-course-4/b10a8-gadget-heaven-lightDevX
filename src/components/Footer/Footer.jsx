@@ -2,7 +2,6 @@ const Footer = () => {
   return (
     <footer className="mt-24 bg-white">
       <div className="container mx-auto px-6 py-8">
-        {/* Logo & Description */}
         <div className="mt-12 flex flex-col items-center justify-center gap-3 text-center">
           <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
             Gadget Heaven
@@ -12,12 +11,9 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Divider Line */}
         <div className="mx-auto my-6 h-[1px] w-[80%] bg-amber-200 sm:w-[70%] lg:w-7xl"></div>
 
-        {/* Footer Links */}
         <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
-          {/* Services */}
           <div>
             <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
               Services
@@ -30,7 +26,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
               Company
@@ -42,7 +37,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h2 className="text-lg font-bold text-neutral-900 sm:text-xl">
               Legal

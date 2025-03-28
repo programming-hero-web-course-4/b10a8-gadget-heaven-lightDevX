@@ -1,28 +1,45 @@
 import { SlidersHorizontal } from "lucide-react";
+import { useState } from "react";
+import { clearCartStorage } from "../../utilities/localStore";
 import CartComponent from "./CartComponent";
 
 const CartList = () => {
+  const [total, setTotal] = useState(0);
+  const [sortOrder, setSortOrder] = useState("desc");
+
+  const handlePurchase = () => {
+    clearCartStorage();
+    window.dispatchEvent(new Event("storage"));
+    window.location.reload();
+  };
   return (
     <div className="container mx-auto mt-8 px-4">
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-        <h1 className="text-xl font-bold md:text-2xl">Cart</h1>
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-xl font-bold">Cart</h1>
 
-        <div className="flex w-full flex-col items-center gap-2 md:w-auto md:flex-row md:gap-4">
-          <h2 className="text-lg font-semibold md:text-xl">
-            Total cost: $99.99
-          </h2>
+        <div className="flex items-center gap-4">
+          <h2 className="text-lg font-semibold">Total cost: ${total}</h2>
 
-          <button className="border-primary text-primary flex w-full items-center justify-center gap-1 rounded-4xl border px-4 py-2 text-sm font-semibold md:w-auto md:gap-2">
-            Sort by Price
-            <SlidersHorizontal className="h-4 w-4 lg:h-6 lg:w-6" />
+          <button
+            onClick={() =>
+              setSortOrder((prev) => (prev === "desc" ? "asc" : "desc"))
+            }
+            className="border-primary text-primary rounded-full border px-4 py-2"
+          >
+            Sort by Price {sortOrder === "desc" ? "(High-Low)" : "(Low-High)"}
+            <SlidersHorizontal className="ml-2 inline-block" />
           </button>
 
-          <button className="bg-primary flex w-full items-center justify-center gap-1 rounded-4xl px-4 py-2.5 text-sm font-semibold text-white md:w-auto md:gap-2">
+          <button
+            onClick={handlePurchase}
+            className="bg-primary rounded-full px-6 py-2 text-white"
+          >
             Purchase
           </button>
         </div>
       </div>
-      <CartComponent></CartComponent>
+
+      <CartComponent onTotalChange={setTotal} sortOrder={sortOrder} />
     </div>
   );
 };
